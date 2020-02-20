@@ -1,5 +1,7 @@
 import { observable } from "mobx";
+import {injectable} from "inversify";
 
-class MainStore {
-  @observable str: String;
+@injectable()
+export class MainStore {
+  @observable user: String = "Guest";
 }
