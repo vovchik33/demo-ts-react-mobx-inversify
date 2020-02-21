@@ -3,7 +3,6 @@ import { Component } from 'react';
 import {Provider} from "inversify-react";
 import {Container} from "inversify";
 import "reflect-metadata";
-import {HeaderComponent} from "./components/header/header.component";
 import {MainStore} from "./stores/main.store";
 
 import "./styles.css";
@@ -15,7 +14,6 @@ export class App extends Component {
     super(props, context);
 
     this.container = new Container();
-    this.container = new Container();
     this.container.bind(MainStore).toSelf();
   }
 
@@ -23,10 +21,7 @@ export class App extends Component {
     return (
       <Provider container={this.container}>
         <div className="App">
-          <HeaderComponent>
-            <h1>Hello CodeSandbox</h1>
-          </HeaderComponent>
-          <h2>Start editing to see some magic happen!</h2>
+          {this.props.children}
         </div>
       </Provider>
     );
