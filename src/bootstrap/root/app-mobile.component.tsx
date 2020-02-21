@@ -1,6 +1,6 @@
 import React from "react";
 import {Component} from "react";
-import {HeaderComponent} from "../../components/header/header.component";
+import {HeaderComponent} from "../../common/components/header/header.component";
 
 class AppMobileComponent extends Component {
   render() {

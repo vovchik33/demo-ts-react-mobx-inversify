@@ -3,7 +3,7 @@ import { Component } from 'react';
 import {Provider} from "inversify-react";
 import {Container} from "inversify";
 import "reflect-metadata";
-import {MainStore} from "./stores/main.store";
+import {MainStore} from "./common/stores/main.store";
 
 import "./styles.css";
 
