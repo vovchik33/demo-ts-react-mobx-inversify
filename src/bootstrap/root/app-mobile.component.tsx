@@ -1,8 +1,16 @@
 import React from "react";
-import {Component} from "react";
 import {HeaderComponent} from "../../common/components/header/header.component";
+import {IModuleConfig, withModule} from "../../common/utils/with-module/with-module.component";
+import {MainStore} from "../../common/stores/main.store";
 
-class AppMobileComponent extends Component {
+const config:IModuleConfig = {
+  addBindings: (container) => {
+    container.bind(MainStore).toSelf();
+  }
+};
+
+@withModule(config)
+class AppMobileComponent extends React.Component {
   render() {
     return (
       <div>
